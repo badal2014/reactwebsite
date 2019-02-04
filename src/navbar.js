@@ -9,7 +9,7 @@ class Navbar extends React.Component{
             <nav className="mainNavBar navbar navbar-inverse">
   <div className="container-fluid">
     <div className="navbar-header">
-      <a className="navbar-brand" >WebSiteName</a>
+      <a className="navbar-brand" >First react website</a>
     </div>
     <ul className="nav navbar-nav">
       <li className="active"><Link to="./#"> Home </Link></li>
