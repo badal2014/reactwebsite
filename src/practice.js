@@ -31,7 +31,7 @@ class Practice extends React.Component{
                     </ul>
                     <button type="button" onClick={() => this.makeMeOlder()}>make me older</button>
                     <button type="button" onClick={this.props.greet}>Greet</button>
-                   
+                
                     
             </div>
         );

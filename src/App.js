@@ -11,6 +11,7 @@ import Counters from './components/counters';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import PracticePage from './practicePage';
 import Timer from './timer';
+import ArrayPractice from './arrayPractice';
 
 class App extends Component {
   render() {
@@ -38,6 +39,7 @@ class App extends Component {
             <Route exact path="/Game" component={Game} />
             <Route exact path="/practicePage" component={PracticePage} />
             <Route exact path="/timer" component={Timer} />
+            <Route exact path="/arrayPractice" component={ArrayPractice} /> 
           </Switch >
         </div>
       </HashRouter>
