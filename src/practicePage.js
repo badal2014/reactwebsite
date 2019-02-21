@@ -44,20 +44,20 @@ handleChange(e){
     }
 }
 handleSubmit(e){
-    // var r=this.state.alertValue
+    var r=this.state.alertValue
     // alert("jdsnxm",r)    
-    var s=this.state.empName
+    // var s=this.state.empName
    
-    // if(r!= undefined){
-        // console.log(r);
-        // alert(r.toUpperCase())
-        
-    // }
-    if(s!= undefined){
-        console.log(s);
-        alert(s.toUpperCase())
+    if(r!= undefined){
+        console.log(r);
+        alert(r.toUpperCase())
         
     }
+    // if(s!= undefined){
+    //     console.log(s);
+    //     alert(s.toUpperCase())
+        
+    // }
 }
 errorMsg(){
     if(this.state.empName ==""){
