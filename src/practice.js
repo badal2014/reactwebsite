@@ -15,7 +15,7 @@ class Practice extends React.Component{
                 
 
                 });
-                console.log(this.age)
+                console.log(this.age);
 
                 
         }
