@@ -16,6 +16,7 @@ class Navbar extends React.Component{
       <li><Link to="./Game"> Game </Link></li>
       <li><Link to="./practicePage"> Practice</Link></li>
       <li><Link to="./timer">Timer</Link></li>
+      <li><Link to="./practice">Practice</Link></li>
       {/* <li><a href="#">Page 2</a></li>
       <li><a href="#">Page 3</a></li> */}
     </ul>

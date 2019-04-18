@@ -1,0 +1,9 @@
+getallJob(){
+
+}
+
+deleteJob(id){
+    then((result) => {
+        getallJob()
+    })
+}

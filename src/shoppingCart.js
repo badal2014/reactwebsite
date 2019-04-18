@@ -2,54 +2,39 @@ import React from "react";
 
 class ShoppingCart extends React.Component{
 
-    state={
-        array:['badal' , 'kunal' , 'Gajendra'],
-        // value: this.props.passState.value
-    };
-
-    formatCount(){
-        const {value} = this.props.passState;
-        return value === 0 ? 'zero' : value;   
-            
-    }
-    // incrementCount(){
-    //     this.setState({
-    //         value : this.state.value +1            
-    //     })
-    // }
-    decrementCount(){
-        this.setState({
-            value : this.state.value -1            
-        })
-    }   
-
-    renderTags(){
-        if(this.state.array.length === 0 )
-        return <p>Ther are no tags</p>;
-        return <ul>{this.state.array.map(tag => <li key= {tag}>{tag}</li>)}</ul>;
-
-    }
-      render() {
-          console.log("props", this.props);
-          
-        let btnClass = this.getBadgedClass();
+// formatCount(){
+//     const {count} = this.state ;
+//     return count === 0 ? 'zero' : count;
+// }
+    render() {
+       
         return (
             <div> 
-                {this.props.id}
-                    <span className={this.getBadgedClass()}>{this.formatCount()}</span>
-                    <button onClick={() => this.props.incrementCounter(this.props.passState)} className="btn btn-secondary btn-sm m-2">Increment</button>
-                    <button onClick={() => this.decrementCount()} className="btn btn-secondary btn-sm">Decrement</button>
-                    {/* {this.state.array.length===0 && 'please create tags'} */}
-                    {/* {this.renderTags()} */}
-                    <button className="btn-danger btn-sm" onClick={() => this.props.onDelete(this.props.passState.id)}>Delete</button>
+                  <span className={this.props.counter.value == 0 ?  "badge badge-primary m-2" : "badge badge-warning m-2"}>{this.props.counter.value == 0 ? 'zero' : this.props.counter.value}</span>                 
+                  <button onClick={(e) => this.props.onIncrement(this.props.counter.id)} className="btn btn-secondary btn-sm">Increment</button>
+                  {/* <button onClick={(e) => this.setState({count : count-1})} className="btn btn-secondary btn-sm m-2">Decrement</button> */}
+                  <button type="button" onClick={() =>this.props.onDelete(this.props.counter.id)} className="btn btn-danger btn-sm m-2">Delete</button>
+                    {/* {console.log(this.props.id)} */}
+
+
+
+
+
+
+
+{/* ------------------------------------------------------------array---------------------------- */}
+                  {/* {this.state.tags.length == 0 ? <p>There are No tags </p> : 
+                <ul>
+                {this.state.tags.map(tag => <li key={tag}>{tag}</li>)}
+
+              </ul>} */}
+{/* ------------------------------------------------------------array---------------------------- */}
+
+                  
             </div>
         );
-      }
+      }}
 
-    getBadgedClass() {
-        let btnClass = "badge m-2 badge-";
-        btnClass += (this.props.passState.value) === 0 ? 'warning' : 'primary';
-        return btnClass;
-    }
-}
+   
+
 export default ShoppingCart;  
